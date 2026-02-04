@@ -135,6 +135,7 @@ function App() {
             <a href="#story">Our Story</a>
             <a href="#menu">Menu</a>
             <a href="#experience">Experience</a>
+            <a href="#franchise">Franchise</a>
             <a href="#visit">Visit</a>
           </div>
           <div className="nav-cta">
@@ -158,15 +159,47 @@ function App() {
           <div className={`hero-container ${heroReveal ? 'is-visible' : ''}`}>
             <div className="hero-content">
               <h1 className="hero-title">
-                <span className="hero-title-accent" style={{fontSize: '0.6em', display: 'block', marginBottom: '1rem', paddingBottom: '0.3rem', lineHeight: '1.4'}}>El Jajj Franchises</span>
                 Flame-grilled.<br />
-                Made with heart.
+                <span className="hero-title-accent">Made with heart.</span>
               </h1>
               
               <p className="hero-subtitle">
                 Charcoal chicken that brings family to the table. Mum's garlic sauce included.
               </p>
               
+              <div style={{marginBottom: '1.5rem'}}>
+                <a 
+                  href="#franchise" 
+                  className="btn btn-lg franchise-btn"
+                  style={{
+                    background: 'transparent',
+                    border: '2px solid #ff6b35',
+                    outline: '2px solid #ff6b35',
+                    outlineOffset: '4px',
+                    color: '#ff6b35',
+                    fontWeight: '600',
+                    padding: '0.75rem 2rem',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = '#ff6b35'
+                    e.target.style.color = '#fff'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'transparent'
+                    e.target.style.color = '#ff6b35'
+                  }}
+                  onMouseDown={(e) => {
+                    e.target.style.transform = 'scale(0.95)'
+                  }}
+                  onMouseUp={(e) => {
+                    e.target.style.transform = 'scale(1)'
+                  }}
+                >
+                  Franchise Opportunities
+                </a>
+              </div>
+
               <div className="hero-actions">
                 <a href="#menu" className="btn btn-primary btn-lg">
                   View menu
@@ -497,8 +530,55 @@ function App() {
         </section>
 
         <section
-          id="visit"
+          id="franchise"
           ref={(el) => setSectionRef(el, 7)}
+          className="section section-alt reveal"
+          aria-labelledby="franchise-heading"
+        >
+          <div className="section-inner">
+            <header className="section-header centered">
+              <p className="eyebrow">Join Us</p>
+              <h2 id="franchise-heading">Franchise Opportunities</h2>
+              <p className="section-lead">
+                Bring the authentic taste of El Jajj charcoal chicken to your community. We're looking for passionate partners who share our commitment to quality, family values, and exceptional customer experience.
+              </p>
+            </header>
+
+            <div className="values-grid">
+              <div className="value-card">
+                <h3>Proven Business Model</h3>
+                <p>
+                  Join a successful brand with a loyal customer base. Our charcoal chicken concept has been refined over years, offering a unique dining experience that keeps customers coming back.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Complete Support</h3>
+                <p>
+                  From site selection and store setup to training and ongoing operations, we provide comprehensive support every step of the way to ensure your success.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Quality Standards</h3>
+                <p>
+                  Benefit from our established supplier relationships, proprietary recipes including Mum's famous garlic sauce, and strict quality control protocols that maintain our reputation.
+                </p>
+              </div>
+            </div>
+
+            <div className="cta-actions" style={{marginTop: '3rem', marginBottom: '3rem', justifyContent: 'center', display: 'flex', gap: '1rem'}}>
+              <a href="tel:" className="btn btn-primary btn-lg">
+                Contact us about franchising
+              </a>
+              <a href="#story" className="btn btn-outline btn-lg">
+                Learn our story
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="visit"
+          ref={(el) => setSectionRef(el, 8)}
           className="section section-cta reveal"
           aria-labelledby="visit-heading"
         >
@@ -531,7 +611,7 @@ function App() {
             <img src={MEDIA.logo} alt="" className="footer-logo-img" />
           </a>
           <p className="footer-note">
-            Charcoal chicken franchises, vibrant salads and Mum&apos;s garlic sauce. Made with love.
+            Charcoal chicken, vibrant salads and Mum&apos;s garlic sauce. Made with love.
           </p>
         </div>
       </footer>
