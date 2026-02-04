@@ -334,6 +334,54 @@
   background: linear-gradient(to top, #fff9f6, transparent);
 }
 
+/* Divider after "The Secret" section */
+#experience::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 100px;
+  background: #1a120e;
+  clip-path: ellipse(60% 100% at 50% 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+[data-theme="light"] #experience::after {
+  background: #faf5f2;
+}
+
+/* Divider after "Made Fresh Daily" section */
+.section-alt::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 100px;
+  background: #0f0a08;
+  clip-path: ellipse(60% 100% at 50% 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+[data-theme="light"] .section-alt::after {
+  background: #fff9f6;
+}
+
+/* Override for menu section to keep its existing divider */
+#menu.section-alt::after {
+  height: 3rem;
+  bottom: 0;
+  background: linear-gradient(to top, #0f0a08, transparent);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+[data-theme="light"] #menu.section-alt::after {
+  background: linear-gradient(to top, #fff9f6, transparent);
+}
+
 /* Accent line above CTA */
 .section-cta::before {
   content: '';
