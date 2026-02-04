@@ -464,35 +464,7 @@ function App() {
         </section>
 
         <section
-          id="visit"
           ref={(el) => setSectionRef(el, 6)}
-          className="section section-cta reveal"
-          aria-labelledby="visit-heading"
-        >
-          <div className="section-inner cta-inner">
-            <div>
-              <p className="eyebrow">Visit us</p>
-              <h2 id="visit-heading">Ready when you are</h2>
-              <p className="section-lead">
-                Dine in or take away. Lunch, dinner, and every moment in between.
-              </p>
-            </div>
-            <div className="cta-actions">
-              <a href="tel:" className="btn btn-primary btn-lg">
-                Call to order
-              </a>
-              <a href="#menu" className="btn btn-secondary btn-lg">
-                Full menu
-              </a>
-              <p className="cta-hours">
-                <span className="dot" /> Lunch &amp; dinner — takeaway &amp; dine in
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section
-          ref={(el) => setSectionRef(el, 7)}
           className="section section-alt reveal"
           aria-labelledby="faq-heading"
         >
@@ -523,6 +495,34 @@ function App() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="visit"
+          ref={(el) => setSectionRef(el, 7)}
+          className="section section-cta reveal"
+          aria-labelledby="visit-heading"
+        >
+          <div className="section-inner cta-inner">
+            <div>
+              <p className="eyebrow">Visit us</p>
+              <h2 id="visit-heading">Ready when you are</h2>
+              <p className="section-lead">
+                Dine in or take away. Lunch, dinner, and every moment in between.
+              </p>
+            </div>
+            <div className="cta-actions">
+              <a href="tel:" className="btn btn-primary btn-lg">
+                Call to order
+              </a>
+              <a href="#menu" className="btn btn-secondary btn-lg">
+                Full menu
+              </a>
+              <p className="cta-hours">
+                <span className="dot" /> Lunch &amp; dinner — takeaway &amp; dine in
+              </p>
             </div>
           </div>
         </section>

@@ -787,9 +787,17 @@
 
 .story-layout {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 3fr);
   gap: 2.7rem;
   align-items: center;
+}
+
+.story-copy {
+  order: 2;
+}
+
+.story-panel {
+  order: 1;
 }
 
 .story-copy p {
