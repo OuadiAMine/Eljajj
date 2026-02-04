@@ -46,7 +46,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const onScroll = () => setHeaderScrolled(window.scrollY > 48)
+    const onScroll = () => setHeaderScrolled(window.scrollY > 120)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
