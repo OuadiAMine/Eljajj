@@ -1056,7 +1056,11 @@
 /* —— FAQ Section —— */
 .faq-list {
   max-width: 780px;
-  margin: 3rem auto 0;
+  margin: 3rem auto 2rem;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
 }
 
 .faq-item {
