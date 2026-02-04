@@ -2,25 +2,25 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 import logoImg from './assets/media/Eljajj-logo.png'
-// Hero: main background - striking chicken shot
-import heroImg from './assets/media/img198.jpg'
-// Hero accent: grilled chicken close-up
-import heroAccentImg from './assets/media/img176.jpg'
+// Hero: main background - full spread with chicken and sides
+import heroImg from './assets/media/img132.jpg'
+// Hero accent: grilled chicken pieces
+import heroAccentImg from './assets/media/img114.jpg'
 // Signature chicken (feature card 1)
 import imgChicken from './assets/media/img102.jpg'
-// Bowls, wraps & salads (feature card 2)
-import imgSalads from './assets/media/img220.jpg'
-// Mum's garlic & sides (feature card 3)
-import imgSides from './assets/media/img232.jpg'
-// Ethically sourced / fresh produce (feature card 4)
-import imgProduce from './assets/media/img261.jpg'
+// Bowls, wraps & salads (feature card 2) - watermelon feta salad
+import imgSalads from './assets/media/img143.jpg'
+// Mum's garlic & sides (feature card 3) - sauce jar
+import imgSides from './assets/media/img69.jpg'
+// Ethically sourced / fresh produce (feature card 4) - fresh lettuce
+import imgProduce from './assets/media/img244.jpg'
 // Story panel – emotional, “memory”, family/food
 import storyImg from './assets/media/img289.jpg'
-// Menu gallery – four varied shots (dishes, vibe, spread across catalog)
-import galleryImg1 from './assets/media/img102.jpg'
-import galleryImg2 from './assets/media/img156.jpg'
-import galleryImg3 from './assets/media/img200.jpg'
-import galleryImg4 from './assets/media/img244.jpg'
+// Menu gallery – food dishes only
+import galleryImg1 from './assets/media/img62.jpg'
+import galleryImg2 from './assets/media/img102.jpg'
+import galleryImg3 from './assets/media/img114.jpg'
+import galleryImg4 from './assets/media/img132.jpg'
 
 const MEDIA = {
   logo: logoImg,
