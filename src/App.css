@@ -1055,13 +1055,13 @@
 
 /* —— FAQ Section —— */
 #faq-heading {
-  padding: 0 3.125rem;
+  padding: 0 9.25rem;
 }
 
 .faq-list {
-  max-width: 880px;
+  max-width: 1000px;
   margin: 3rem auto 2rem;
-  padding: 0 3.125rem;
+  padding: 0 9.25rem;
 }
 
 .faq-item:last-child {
