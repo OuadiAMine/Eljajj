@@ -40,25 +40,22 @@ function App() {
   const [openFaq, setOpenFaq] = useState(null)
   const mainRef = useRef(null)
   const sectionRefs = useRef([])
-  const lastScrollY = useRef(0)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'dark')
   }, [])
 
   useEffect(() => {
+    let ticking = false
+    
     const onScroll = () => {
-      const currentScrollY = window.scrollY
-      const scrollingDown = currentScrollY > lastScrollY.current
-      
-      // Use different thresholds for scrolling up vs down to prevent jitter
-      if (scrollingDown && currentScrollY > 150) {
-        setHeaderScrolled(true)
-      } else if (!scrollingDown && currentScrollY < 100) {
-        setHeaderScrolled(false)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setHeaderScrolled(window.scrollY > 200)
+          ticking = false
+        })
+        ticking = true
       }
-      
-      lastScrollY.current = currentScrollY
     }
     
     window.addEventListener('scroll', onScroll, { passive: true })
