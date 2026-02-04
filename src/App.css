@@ -999,6 +999,90 @@
   line-height: 1.65;
 }
 
+/* —— FAQ Section —— */
+.faq-list {
+  max-width: 780px;
+  margin: 3rem auto 0;
+}
+
+.faq-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background: var(--card-bg);
+  overflow: hidden;
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.faq-item:hover {
+  border-color: var(--color-primary);
+}
+
+.faq-item.is-open {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(255, 50, 3, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: color 0.3s ease-out;
+}
+
+.faq-question:hover {
+  color: var(--color-primary);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease-out, background 0.3s ease-out;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(180deg);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-item.is-open .faq-answer {
+  max-height: 500px;
+  padding: 0 1.75rem 1.5rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
 .site-footer {
   border-top: 1px solid var(--border-subtle);
   padding: 1.4rem 1.5rem 1.8rem;
@@ -1180,6 +1264,21 @@
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .faq-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.25rem;
+  }
+
+  .faq-item.is-open .faq-answer {
+    padding: 0 1.25rem 1.25rem;
   }
 
   .audience-grid {

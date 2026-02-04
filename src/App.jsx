@@ -37,6 +37,7 @@ const MEDIA = {
 function App() {
   const [heroReveal, setHeroReveal] = useState(false)
   const [headerScrolled, setHeaderScrolled] = useState(false)
+  const [openFaq, setOpenFaq] = useState(null)
   const mainRef = useRef(null)
   const sectionRefs = useRef([])
 
@@ -71,6 +72,37 @@ function App() {
   const setSectionRef = (el, i) => {
     sectionRefs.current[i] = el
   }
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index)
+  }
+
+  const faqs = [
+    {
+      question: "What makes El Jejj's chicken special?",
+      answer: "Every chicken is soaked overnight in Mum's special brine recipe—the same one from our family gatherings. Then it's grilled over real charcoal for that perfect crispy skin and juicy, tender inside. It's a flavor experience you won't forget."
+    },
+    {
+      question: "Do you offer vegetarian options?",
+      answer: "Yes! We have a vibrant selection of Middle Eastern salads and sides including Tabouli, Fattoush, Hummus, Baba Ganoush, and Falafel. Our Lebanese bread is made fresh daily, and we offer various bowls and wraps that can be customized."
+    },
+    {
+      question: "Can I order for a large group or event?",
+      answer: "Absolutely! We cater for families, celebrations, corporate meetings, and group orders. Contact us in advance for large orders and we'll make sure everything is fresh and ready when you need it."
+    },
+    {
+      question: "Is your chicken ethically sourced?",
+      answer: "Yes, we're committed to ethical sourcing. We work with trusted local suppliers we've partnered with for years, ensuring our chicken is responsibly sourced and meets our high standards for quality and sustainability."
+    },
+    {
+      question: "Do you offer dine-in and takeaway?",
+      answer: "Yes, both! Whether you want to dine in with family and friends or grab takeaway for a quick meal, we've got you covered. Perfect for lunch, dinner, date nights, or celebrations."
+    },
+    {
+      question: "What's included with the charcoal chicken?",
+      answer: "Our signature charcoal chicken comes with hot chips, Lebanese bread (made fresh daily), and Mum's famous creamy garlic sauce. You can also add any of our fresh salads and sides to complete your meal."
+    }
+  ]
 
   return (
     <div className="page">
@@ -431,6 +463,42 @@ function App() {
               <p className="cta-hours">
                 <span className="dot" /> Lunch &amp; dinner — takeaway &amp; dine in
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          ref={(el) => setSectionRef(el, 7)}
+          className="section section-alt reveal"
+          aria-labelledby="faq-heading"
+        >
+          <div className="section-inner">
+            <header className="section-header centered">
+              <p className="eyebrow">FAQs</p>
+              <h2 id="faq-heading">Questions? We've got answers</h2>
+              <p className="section-lead">
+                Everything you need to know about El Jejj charcoal chicken.
+              </p>
+            </header>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <div key={index} className={`faq-item ${openFaq === index ? 'is-open' : ''}`}>
+                  <button
+                    className="faq-question"
+                    onClick={() => toggleFaq(index)}
+                    aria-expanded={openFaq === index}
+                  >
+                    <span>{faq.question}</span>
+                    <span className="faq-icon" aria-hidden="true">
+                      {openFaq === index ? '−' : '+'}
+                    </span>
+                  </button>
+                  <div className="faq-answer">
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
