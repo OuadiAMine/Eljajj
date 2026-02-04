@@ -1,16 +1,36 @@
-# React + Vite
+# El Jejj – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React landing page for **El Jejj** charcoal chicken: Middle Eastern cuisine, Mum's recipes, and ethically sourced chicken.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Distinct section backgrounds** – Hero, menu, experience, story, and CTA each have their own gradient and tone
+- **Dark & light theme** – Toggle with persistence (localStorage)
+- **Chicken-first hero** – Hero imagery focused on the main product
+- **Eljajj logo** – Brand logo in header and footer
+- **Smooth transitions** – Scroll reveals and hover states
+- **Responsive** – Layout adapts for mobile and desktop
 
-## React Compiler
+## Tech
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + Vite
+- CSS (custom properties, no component library)
 
-## Expanding the ESLint configuration
+## Run locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173).
+
+## Build
+
+```bash
+npm run build
+```
+
+---
+
+[El Jejj](https://github.com/OuadiAMine/Eljajj) – Charcoal chicken, done to perfection.
