@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 import logoImg from './assets/media/Eljajj-logo.png'
-// Hero: chicken platter – main theme
-import heroImg from './assets/media/img62.jpg'
-// Hero card: feast / chicken centrepiece
-import heroCardImg from './assets/media/img102.jpg'
+// Hero: main background - striking chicken shot
+import heroImg from './assets/media/img198.jpg'
+// Hero accent: grilled chicken close-up
+import heroAccentImg from './assets/media/img176.jpg'
 // Signature chicken (feature card 1)
-import imgChicken from './assets/media/img198.jpg'
+import imgChicken from './assets/media/img102.jpg'
 // Bowls, wraps & salads (feature card 2)
 import imgSalads from './assets/media/img220.jpg'
 // Mum's garlic & sides (feature card 3)
@@ -25,7 +25,7 @@ import galleryImg4 from './assets/media/img244.jpg'
 const MEDIA = {
   logo: logoImg,
   heroImg,
-  heroCardImg,
+  heroAccentImg,
   chicken: imgChicken,
   salads: imgSalads,
   sides: imgSides,
@@ -114,29 +114,42 @@ function App() {
 
       <main ref={mainRef}>
         <section className="hero" aria-label="El Jejj hero">
+          <div className="hero-bg-wrapper">
+            <img src={MEDIA.heroImg} alt="" className="hero-bg-image" />
+            <div className="hero-overlay"></div>
+          </div>
+          
           <div className={`hero-container ${heroReveal ? 'is-visible' : ''}`}>
             <div className="hero-content">
-              <div className="hero-text">
-                <h1 className="hero-title">
-                  Charcoal chicken.<br />
-                  Made with love.
-                </h1>
-                <p className="hero-subtitle">
-                  Middle Eastern charcoal chicken, Mum's recipes, and that garlic sauce everyone asks for.
-                </p>
-                <div className="hero-cta">
-                  <a href="#menu" className="btn btn-primary btn-lg">
-                    Order now
-                  </a>
-                </div>
+              <div className="hero-badge">
+                <span>Est. 2024</span>
+                <span className="badge-dot">•</span>
+                <span>Middle Eastern</span>
               </div>
               
-              <div className="hero-visual">
-                <div className="hero-image-main">
-                  <img src={MEDIA.heroCardImg} alt="El Jejj charcoal chicken feast" />
-                </div>
-                <div className="hero-image-accent">
-                  <img src={MEDIA.heroImg} alt="Charcoal chicken platter" />
+              <h1 className="hero-title">
+                Flame-grilled.<br />
+                <span className="hero-title-accent">Made with heart.</span>
+              </h1>
+              
+              <p className="hero-subtitle">
+                Charcoal chicken that brings family to the table. Mum's garlic sauce included.
+              </p>
+              
+              <div className="hero-actions">
+                <a href="#menu" className="btn btn-primary btn-lg">
+                  View menu
+                </a>
+                <a href="#story" className="btn btn-outline btn-lg">
+                  Our story
+                </a>
+              </div>
+              
+              <div className="hero-accent-card">
+                <img src={MEDIA.heroAccentImg} alt="Charcoal chicken" />
+                <div className="hero-accent-text">
+                  <span className="accent-label">Signature dish</span>
+                  <span className="accent-title">Charcoal Chicken</span>
                 </div>
               </div>
             </div>
