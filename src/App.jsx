@@ -40,13 +40,27 @@ function App() {
   const [openFaq, setOpenFaq] = useState(null)
   const mainRef = useRef(null)
   const sectionRefs = useRef([])
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', 'dark')
   }, [])
 
   useEffect(() => {
-    const onScroll = () => setHeaderScrolled(window.scrollY > 120)
+    const onScroll = () => {
+      const currentScrollY = window.scrollY
+      const scrollingDown = currentScrollY > lastScrollY.current
+      
+      // Use different thresholds for scrolling up vs down to prevent jitter
+      if (scrollingDown && currentScrollY > 150) {
+        setHeaderScrolled(true)
+      } else if (!scrollingDown && currentScrollY < 100) {
+        setHeaderScrolled(false)
+      }
+      
+      lastScrollY.current = currentScrollY
+    }
+    
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
