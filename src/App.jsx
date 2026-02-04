@@ -273,30 +273,32 @@ function App() {
               </p>
             </header>
 
-            <div className="secret-feature-img">
-              <img src={MEDIA.secretImg} alt="Perfectly grilled charcoal chicken" />
-            </div>
+            <div className="secret-layout">
+              <div className="secret-feature-img">
+                <img src={MEDIA.secretImg} alt="Perfectly grilled charcoal chicken" />
+              </div>
 
-            <div className="process-grid">
-              <div className="process-step">
-                <span className="process-number">01</span>
-                <h3>Select & Source</h3>
-                <p>Fresh, ethically sourced chicken from trusted local suppliers we&apos;ve worked with for years.</p>
-              </div>
-              <div className="process-step">
-                <span className="process-number">02</span>
-                <h3>Marinate Overnight</h3>
-                <p>Each chicken soaked in Mum&apos;s special brine blend—the same recipe from our family gatherings.</p>
-              </div>
-              <div className="process-step">
-                <span className="process-number">03</span>
-                <h3>Charcoal Grilled</h3>
-                <p>Cooked over real charcoal to achieve that perfect crispy skin and juicy, tender inside.</p>
-              </div>
-              <div className="process-step">
-                <span className="process-number">04</span>
-                <h3>Served Fresh</h3>
-                <p>Hot chips, Lebanese bread made fresh daily, and Mum&apos;s famous creamy garlic sauce.</p>
+              <div className="process-grid">
+                <div className="process-step">
+                  <span className="process-number">01</span>
+                  <h3>Select & Source</h3>
+                  <p>Fresh, ethically sourced chicken from trusted local suppliers we&apos;ve worked with for years.</p>
+                </div>
+                <div className="process-step">
+                  <span className="process-number">02</span>
+                  <h3>Marinate Overnight</h3>
+                  <p>Each chicken soaked in Mum&apos;s special brine blend—the same recipe from our family gatherings.</p>
+                </div>
+                <div className="process-step">
+                  <span className="process-number">03</span>
+                  <h3>Charcoal Grilled</h3>
+                  <p>Cooked over real charcoal to achieve that perfect crispy skin and juicy, tender inside.</p>
+                </div>
+                <div className="process-step">
+                  <span className="process-number">04</span>
+                  <h3>Served Fresh</h3>
+                  <p>Hot chips, Lebanese bread made fresh daily, and Mum&apos;s famous creamy garlic sauce.</p>
+                </div>
               </div>
             </div>
           </div>
