@@ -1072,12 +1072,12 @@
 
 .faq-list {
   max-width: 1000px;
-  margin: 3rem auto 2rem;
+  margin: 3rem auto 3rem;
   padding: 0;
 }
 
 .faq-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 
 .faq-item {
