@@ -114,77 +114,31 @@ function App() {
 
       <main ref={mainRef}>
         <section className="hero" aria-label="El Jejj hero">
-          <div className="hero-bg">
-            <img src={MEDIA.heroImg} alt="" className="hero-bg-img" />
-            <span className="hero-bg-overlay" aria-hidden />
-          </div>
-          <div className={`hero-inner ${heroReveal ? 'is-visible' : ''}`}>
-            <div className="hero-badge-row">
-              <span className="pill pill-soft">
-                Middle Eastern charcoal chicken
-              </span>
-              <span className="pill pill-outline">Done to perfection</span>
-            </div>
-
-            <div className="hero-grid">
-              <div className="hero-copy">
-                <h1>
-                  The taste of
-                  <span className="hero-highlight"> family, on the table.</span>
+          <div className={`hero-container ${heroReveal ? 'is-visible' : ''}`}>
+            <div className="hero-content">
+              <div className="hero-text">
+                <h1 className="hero-title">
+                  Charcoal chicken.<br />
+                  Made with love.
                 </h1>
-                <p className="hero-lead">
-                  Real charcoal. Mum&apos;s recipes. Fresh, ethically sourced chicken
-                  and that garlic sauce everyone asks for. Dine in or take away.
+                <p className="hero-subtitle">
+                  Middle Eastern charcoal chicken, Mum's recipes, and that garlic sauce everyone asks for.
                 </p>
-
-                <div className="hero-actions">
+                <div className="hero-cta">
                   <a href="#menu" className="btn btn-primary btn-lg">
-                    See the menu
-                  </a>
-                  <a href="#story" className="btn btn-secondary btn-lg">
-                    Our story
+                    Order now
                   </a>
                 </div>
-
-                <dl className="hero-stats" aria-label="El Jejj highlights">
-                  <div className="stat">
-                    <dt>Ethically sourced</dt>
-                    <dd>Trusted local suppliers.</dd>
-                  </div>
-                  <div className="stat">
-                    <dt>Mum&apos;s recipes</dt>
-                    <dd>Tabouli, fattoush, garlic sauce.</dd>
-                  </div>
-                  <div className="stat">
-                    <dt>Dine in or takeaway</dt>
-                    <dd>Family nights to quick lunches.</dd>
-                  </div>
-                </dl>
               </div>
-
-              <aside className="hero-card" aria-label="Signature charcoal chicken">
-                <div className="hero-glow" />
-                <div className="hero-card-inner">
-                  <div className="hero-card-img-wrap">
-                    <img src={MEDIA.heroCardImg} alt="Charcoal chicken and Middle Eastern feast" className="hero-card-img" />
-                  </div>
-                  <p className="hero-card-label">Signature charcoal chicken</p>
-                  <p className="hero-card-title">
-                    Flame-kissed. Juicy inside. Crispy outside.
-                  </p>
-                  <ul className="hero-card-list">
-                    <li>Whole, half, breast or thigh cuts</li>
-                    <li>Soaked overnight in our special brine</li>
-                    <li>Served with hot chips and Mum&apos;s garlic sauce</li>
-                    <li>Pair with fresh tabouli or fattoush salad</li>
-                  </ul>
-                  <div className="hero-card-footer">
-                    <span className="pill pill-soft small">
-                      Fresh &nbsp;•&nbsp; Grilled &nbsp;•&nbsp; Made with love
-                    </span>
-                  </div>
+              
+              <div className="hero-visual">
+                <div className="hero-image-main">
+                  <img src={MEDIA.heroCardImg} alt="El Jejj charcoal chicken feast" />
                 </div>
-              </aside>
+                <div className="hero-image-accent">
+                  <img src={MEDIA.heroImg} alt="Charcoal chicken platter" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -213,69 +167,44 @@ function App() {
               ))}
             </div>
 
-            <div className="feature-grid">
-              <article className="feature-card">
-                <div className="feature-card-img">
-                  <img src={MEDIA.chicken} alt="Charcoal chicken" />
+            <div className="menu-highlights">
+              <article className="menu-highlight">
+                <div className="menu-highlight-media">
+                  <img src={MEDIA.salads} alt="Bowls, wraps & salads" />
                 </div>
-                <h3>Signature Charcoal Chicken</h3>
-                <p>
-                  Whole, half, breast or thigh – marinated overnight, then
-                  slow-charcoaled to lock in incredible flavour and tenderness.
-                </p>
-                <ul>
-                  <li>Whole &amp; half charcoal chicken</li>
-                  <li>Breast &amp; thigh portions</li>
-                  <li>Served with chips, garlic &amp; Lebanese bread</li>
-                </ul>
+                <div className="menu-highlight-text">
+                  <h3>Bowls, Wraps &amp; Salads</h3>
+                  <p>
+                    Fresh, colourful plates built around crisp veg, herbs and our
+                    house-made dressings.
+                  </p>
+                </div>
               </article>
 
-              <article className="feature-card">
-                <div className="feature-card-img">
-                  <img src={MEDIA.salads} alt="Bowls and salads" />
+              <article className="menu-highlight">
+                <div className="menu-highlight-media">
+                  <img src={MEDIA.sides} alt="Mum's garlic and sides" />
                 </div>
-                <h3>Bowls, Wraps &amp; Salads</h3>
-                <p>
-                  Fresh, colourful plates made daily – built around crisp veg,
-                  herbs and our house-made dressings.
-                </p>
-                <ul>
-                  <li>Tabouli, fattoush &amp; seasonal salads</li>
-                  <li>Falafel &amp; charcoal chicken wraps</li>
-                  <li>Grain bowls layered with whole foods</li>
-                </ul>
+                <div className="menu-highlight-text">
+                  <h3>Mum&apos;s Garlic &amp; Sides</h3>
+                  <p>
+                    The garlic sauce everyone talks about, served with hot chips,
+                    Lebanese bread and crunchy pickles.
+                  </p>
+                </div>
               </article>
 
-              <article className="feature-card">
-                <div className="feature-card-img">
-                  <img src={MEDIA.sides} alt="Garlic and sides" />
+              <article className="menu-highlight">
+                <div className="menu-highlight-media">
+                  <img src={MEDIA.produce} alt="Ethically sourced produce" />
                 </div>
-                <h3>Mum&apos;s Garlic &amp; Sides</h3>
-                <p>
-                  The secret everyone talks about – Mum&apos;s creamy garlic
-                  sauce, made in small batches with love.
-                </p>
-                <ul>
-                  <li>Famous creamy garlic sauce</li>
-                  <li>Hot chips &amp; Lebanese bread</li>
-                  <li>House pickled veggies in glass jars</li>
-                </ul>
-              </article>
-
-              <article className="feature-card feature-card-highlight">
-                <div className="feature-card-img">
-                  <img src={MEDIA.produce} alt="Fresh produce" />
+                <div className="menu-highlight-text">
+                  <h3>Ethically Sourced Produce</h3>
+                  <p>
+                    From trusted local suppliers to in-store prep, every plate
+                    respects the ingredients and the people behind them.
+                  </p>
                 </div>
-                <h3>Ethically Sourced Produce</h3>
-                <p>
-                  From farm to flame, we partner with trusted producers and
-                  follow strict health and safety standards.
-                </p>
-                <ul>
-                  <li>Ethical chicken suppliers</li>
-                  <li>Fresh ingredients prepared in-store</li>
-                  <li>Rigorous kitchen &amp; team care protocols</li>
-                </ul>
               </article>
             </div>
           </div>
