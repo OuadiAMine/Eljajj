@@ -21,6 +21,12 @@ import galleryImg1 from './assets/media/img62.jpg'
 import galleryImg2 from './assets/media/img102.jpg'
 import galleryImg3 from './assets/media/img114.jpg'
 import galleryImg4 from './assets/media/img132.jpg'
+// The Secret section - grilled chicken close-up
+import secretImg from './assets/media/img19.jpg'
+// Made Fresh Daily - person enjoying salad
+import freshDailyImg from './assets/media/img145.jpg'
+// Takeaway bags
+import takeawayImg from './assets/media/img60.jpg'
 
 const MEDIA = {
   logo: logoImg,
@@ -32,6 +38,9 @@ const MEDIA = {
   produce: imgProduce,
   storyImg,
   gallery: [galleryImg1, galleryImg2, galleryImg3, galleryImg4],
+  secretImg,
+  freshDailyImg,
+  takeawayImg,
 }
 
 function App() {
@@ -264,6 +273,10 @@ function App() {
               </p>
             </header>
 
+            <div className="secret-feature-img">
+              <img src={MEDIA.secretImg} alt="Perfectly grilled charcoal chicken" />
+            </div>
+
             <div className="process-grid">
               <div className="process-step">
                 <span className="process-number">01</span>
@@ -313,7 +326,7 @@ function App() {
                 </ul>
               </div>
               <div className="split-visual">
-                <div className="fresh-badge">Fresh Daily</div>
+                <img src={MEDIA.freshDailyImg} alt="Enjoying fresh salad" className="fresh-visual-img" />
               </div>
             </div>
           </div>
