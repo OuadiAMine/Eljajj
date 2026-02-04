@@ -10,13 +10,9 @@
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: linear-gradient(
-    to bottom,
-    var(--header-bg),
-    transparent
-  );
+  background: transparent;
   border-bottom: 1px solid transparent;
-  transition: background 0.4s ease-out, border-color 0.4s ease-out, box-shadow 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .site-header.is-scrolled {
@@ -28,11 +24,16 @@
 .nav {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 1.1rem 1.5rem;
+  padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  transition: padding 0.4s ease-out;
+}
+
+.site-header.is-scrolled .nav {
+  padding: 1.1rem 1.5rem;
 }
 
 .logo-link {
@@ -47,11 +48,17 @@
 
 .site-header .logo-img {
   display: block;
-  height: 2.75rem;
+  height: 3.5rem;
   width: auto;
-  max-width: 10rem;
+  max-width: 12rem;
   object-fit: contain;
   object-position: left center;
+  transition: height 0.4s ease-out, max-width 0.4s ease-out;
+}
+
+.site-header.is-scrolled .logo-img {
+  height: 2.75rem;
+  max-width: 10rem;
 }
 
 .nav-links {
@@ -80,32 +87,6 @@
   transition: transform 0.35s ease-out;
 }
 
-.theme-toggle {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  background: var(--card-bg);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.35s ease-out, background 0.35s ease-out, transform 0.35s ease-out;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.06);
-}
-
-.theme-toggle:hover {
-  border-color: var(--color-primary);
-  background: var(--color-surface);
-}
-
-.theme-toggle-icon {
-  font-size: 1.1rem;
-  line-height: 1;
-}
 
 .nav-links a:hover {
   color: var(--color-text);

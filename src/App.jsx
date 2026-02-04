@@ -35,19 +35,14 @@ const MEDIA = {
 }
 
 function App() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'dark'
-    return localStorage.getItem('eljejj-theme') || 'dark'
-  })
   const [heroReveal, setHeroReveal] = useState(false)
   const [headerScrolled, setHeaderScrolled] = useState(false)
   const mainRef = useRef(null)
   const sectionRefs = useRef([])
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('eljejj-theme', theme)
-  }, [theme])
+    document.documentElement.setAttribute('data-theme', 'dark')
+  }, [])
 
   useEffect(() => {
     const onScroll = () => setHeaderScrolled(window.scrollY > 48)
@@ -77,8 +72,6 @@ function App() {
     sectionRefs.current[i] = el
   }
 
-  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
-
   return (
     <div className="page">
       <header className={`site-header ${headerScrolled ? 'is-scrolled' : ''}`}>
@@ -93,15 +86,6 @@ function App() {
             <a href="#visit">Visit</a>
           </div>
           <div className="nav-cta">
-            <button
-              type="button"
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-            >
-              <span className="theme-toggle-icon" aria-hidden>{theme === 'dark' ? '☀️' : '🌙'}</span>
-            </button>
             <a href="#visit" className="btn btn-ghost">
               Book a table
             </a>
