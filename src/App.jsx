@@ -158,8 +158,9 @@ function App() {
           <div className={`hero-container ${heroReveal ? 'is-visible' : ''}`}>
             <div className="hero-content">
               <h1 className="hero-title">
+                <span className="hero-title-accent" style={{fontSize: '0.6em', display: 'block', marginBottom: '1rem', paddingBottom: '0.3rem', lineHeight: '1.4'}}>El Jajj Franchises</span>
                 Flame-grilled.<br />
-                <span className="hero-title-accent">Made with heart.</span>
+                Made with heart.
               </h1>
               
               <p className="hero-subtitle">
@@ -530,7 +531,7 @@ function App() {
             <img src={MEDIA.logo} alt="" className="footer-logo-img" />
           </a>
           <p className="footer-note">
-            Charcoal chicken, vibrant salads and Mum&apos;s garlic sauce. Made with love.
+            Charcoal chicken franchises, vibrant salads and Mum&apos;s garlic sauce. Made with love.
           </p>
         </div>
       </footer>
