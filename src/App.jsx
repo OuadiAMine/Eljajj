@@ -208,8 +208,77 @@ function App() {
         </section>
 
         <section
-          id="experience"
           ref={(el) => setSectionRef(el, 1)}
+          className="section reveal"
+          aria-labelledby="secret-heading"
+        >
+          <div className="section-inner">
+            <header className="section-header centered">
+              <p className="eyebrow">The Secret</p>
+              <h2 id="secret-heading">Soaked overnight in Mum&apos;s special brine</h2>
+              <p className="section-lead">
+                At the heart of our family&apos;s culinary philosophy lies a simple truth: the best food is always uncomplicated. Every chicken is lovingly soaked overnight in our special brine, guaranteeing a flavor experience that will stay with you long after the last bite.
+              </p>
+            </header>
+
+            <div className="process-grid">
+              <div className="process-step">
+                <span className="process-number">01</span>
+                <h3>Select & Source</h3>
+                <p>Fresh, ethically sourced chicken from trusted local suppliers we&apos;ve worked with for years.</p>
+              </div>
+              <div className="process-step">
+                <span className="process-number">02</span>
+                <h3>Marinate Overnight</h3>
+                <p>Each chicken soaked in Mum&apos;s special brine blend—the same recipe from our family gatherings.</p>
+              </div>
+              <div className="process-step">
+                <span className="process-number">03</span>
+                <h3>Charcoal Grilled</h3>
+                <p>Cooked over real charcoal to achieve that perfect crispy skin and juicy, tender inside.</p>
+              </div>
+              <div className="process-step">
+                <span className="process-number">04</span>
+                <h3>Served Fresh</h3>
+                <p>Hot chips, Lebanese bread made fresh daily, and Mum&apos;s famous creamy garlic sauce.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          ref={(el) => setSectionRef(el, 2)}
+          className="section section-alt reveal"
+          aria-labelledby="fresh-heading"
+        >
+          <div className="section-inner">
+            <div className="split-content">
+              <div className="split-text">
+                <p className="eyebrow">Made Fresh Daily</p>
+                <h2 id="fresh-heading">A vibrant selection of salads & fresh bread</h2>
+                <p>
+                  Indulge in vibrant, wholesome salads crafted from the finest whole foods. Our commitment to quality shines through in every bite, as we source only the best ingredients for our signature salads.
+                </p>
+                <p>
+                  Discover a fresh selection of salads daily, each store offering its own favorites. Lebanese bread made fresh every morning. With a diverse range to choose from, every visit promises a delightful opportunity to try something new and exciting.
+                </p>
+                <ul className="fresh-list">
+                  <li>Tabouli, Fattoush, Hummus</li>
+                  <li>Baba Ganoush, Falafel</li>
+                  <li>Mum&apos;s pickled vegetables</li>
+                  <li>Lebanese bread (baked daily)</li>
+                </ul>
+              </div>
+              <div className="split-visual">
+                <div className="fresh-badge">Fresh Daily</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="experience"
+          ref={(el) => setSectionRef(el, 3)}
           className="section reveal"
           aria-labelledby="experience-heading"
         >
@@ -265,7 +334,7 @@ function App() {
 
         <section
           id="story"
-          ref={(el) => setSectionRef(el, 2)}
+          ref={(el) => setSectionRef(el, 4)}
           className="section section-alt reveal"
           aria-labelledby="story-heading"
         >
@@ -302,8 +371,45 @@ function App() {
         </section>
 
         <section
+          ref={(el) => setSectionRef(el, 5)}
+          className="section reveal"
+          aria-labelledby="values-heading"
+        >
+          <div className="section-inner">
+            <header className="section-header centered">
+              <p className="eyebrow">Our Values</p>
+              <h2 id="values-heading">Operating with integrity</h2>
+              <p className="section-lead">
+                We deeply value our team, our customers, and our planet. Every decision we make reflects our commitment to quality, respect, and responsibility.
+              </p>
+            </header>
+
+            <div className="values-grid">
+              <div className="value-card">
+                <h3>Health & Safety</h3>
+                <p>
+                  Health and safety are paramount at El Jejj. We uphold rigorous standards to ensure every dish meets high protocols, prioritizing the well-being of customers and staff.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Ethical Sourcing</h3>
+                <p>
+                  From responsibly sourced ingredients to sustainable practices, we ensure every bite reflects our dedication to quality and respect for the environment.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Team First</h3>
+                <p>
+                  We provide a safe, supportive work environment. El Jejj invests in training, promotes respect, and listens to feedback to ensure every member feels valued.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
           id="visit"
-          ref={(el) => setSectionRef(el, 3)}
+          ref={(el) => setSectionRef(el, 6)}
           className="section section-cta reveal"
           aria-labelledby="visit-heading"
         >
