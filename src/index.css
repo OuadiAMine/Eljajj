@@ -1,0 +1,90 @@
+/* Dark theme (default) – #631301, white, #ff3203, #f45639 */
+:root,
+[data-theme="dark"] {
+  --color-primary: #ff3203;
+  --color-primary-dark: #631301;
+  --color-accent: #f45639;
+  --color-bg: #0d0806;
+  --color-surface: #1a0f0c;
+  --color-surface-soft: #150c09;
+  --color-muted: #b8a49c;
+  --color-text: #fdf7f4;
+  --color-text-inverse: #0d0806;
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --header-bg: rgba(13, 8, 6, 0.94);
+  --card-bg: rgba(20, 12, 9, 0.95);
+  --pill-bg: rgba(255, 50, 3, 0.18);
+  --pill-border: rgba(244, 86, 57, 0.5);
+  --hero-highlight-from: #ffb399;
+  --hero-highlight-via: #ff3203;
+  --hero-highlight-to: #f45639;
+  --gradient-bg-a: #2a1510;
+  --gradient-bg-b: #0d0806;
+}
+
+[data-theme="light"] {
+  --color-primary: #ff3203;
+  --color-primary-dark: #631301;
+  --color-accent: #f45639;
+  --color-bg: #fefaf8;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8f2ef;
+  --color-muted: #6b5348;
+  --color-text: #1a0f0c;
+  --color-text-inverse: #ffffff;
+  --shadow-soft: 0 18px 45px rgba(99, 19, 1, 0.12);
+  --border-subtle: rgba(99, 19, 1, 0.12);
+  --header-bg: rgba(254, 250, 248, 0.94);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --pill-bg: rgba(255, 50, 3, 0.12);
+  --pill-border: rgba(244, 86, 57, 0.45);
+  --hero-highlight-from: #631301;
+  --hero-highlight-via: #ff3203;
+  --hero-highlight-to: #f45639;
+  --gradient-bg-a: #f5e8e4;
+  --gradient-bg-b: #fefaf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
