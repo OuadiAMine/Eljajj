@@ -157,12 +157,6 @@ function App() {
           
           <div className={`hero-container ${heroReveal ? 'is-visible' : ''}`}>
             <div className="hero-content">
-              <div className="hero-badge">
-                <span>Est. 2024</span>
-                <span className="badge-dot">•</span>
-                <span>Middle Eastern</span>
-              </div>
-              
               <h1 className="hero-title">
                 Flame-grilled.<br />
                 <span className="hero-title-accent">Made with heart.</span>
