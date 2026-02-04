@@ -1054,9 +1054,14 @@
 }
 
 /* —— FAQ Section —— */
+#faq-heading {
+  padding: 0 3.125rem;
+}
+
 .faq-list {
-  max-width: 780px;
+  max-width: 880px;
   margin: 3rem auto 2rem;
+  padding: 0 3.125rem;
 }
 
 .faq-item:last-child {
@@ -1338,6 +1343,14 @@
     width: 1.75rem;
     height: 1.75rem;
     font-size: 1.25rem;
+  }
+
+  .faq-list {
+    padding: 0 1.5rem;
+  }
+
+  #faq-heading {
+    padding: 0 1.5rem;
   }
 
   .faq-item.is-open .faq-answer {
